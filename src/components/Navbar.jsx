@@ -21,6 +21,14 @@ function Navbar() {
             tabName: "Logout",
             path: "/logout",
         },
+        {
+            tabName: "preview",
+            path: "/preview",
+        },
+        {
+            tabName: "build",
+            path: "/build",
+        },
     ];
 
 
