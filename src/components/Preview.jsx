@@ -1,12 +1,12 @@
 import html2pdf from 'html2pdf.js';
 import React, { useRef, useState } from 'react';
 // import profile from "./img/profile.png";
-import { FaRegUser } from "react-icons/fa";
-import { IoMailOpenOutline } from "react-icons/io5";
+import ResumeLeft from './ResumeLeft';
 
 const Preview = () => {
   const contentRef = useRef();
   const [pdfPreview, setPdfPreview] = useState(null);
+
 
   const handlePreviewPdf = () => {
     const element = contentRef.current;
@@ -60,57 +60,69 @@ const Preview = () => {
   
     <div ref={contentRef} className='flex items-center justify-center'>
       <div className='w-[820px] border border-black bg-[#f5f5f5] flex items-start justify-start'>
-        <div className="left w-[30%] h-[1054px] bg-[#1b3048] flex items-start justify-evenly flex-col text-white font-bold text-xl p-2" style={{fontFamily:"Cambria"}}>
-          {/* <div className='left-top'> */}
-            <FaRegUser className='bg-white h-[100px] w-[100px] rounded-md mx-auto' />
-          {/* </div> */}
-          {/* <div className='left-bottom'> */}
-            <div className="contacts w-full">
-              <p style={{borderBottom:"1px solid black"}} className="pb-2">Contacts</p>
-              <hr />
-              {/* <SlSocialGithub className='w-[20px] h-[30px] mr-[10px]'/> */}
-              <ul className='my-1 ml-2 font-normal' style={{fontFamily:"Cambria", fontSize:"16px"}}>
-                <li className='flex items-start'> Shaniwari cotton market near udapure jewellers, Nagpur 440018 </li>
-                <li className='flex items-start'>7448208699 </li>
-                <li className='flex items-start'><IoMailOpenOutline className='' />aniketwakalkar23@gmail.com </li>
-                <li className='flex items-start'>aniketwakalkar23@gmail.com </li>
+        <ResumeLeft/>
+        <div className="resumeRight w-[65%] h-[1052px] bg-white flex items-start justify-start flex-col text-[#1b3048] font-bold text-xl p-2 pr-4" style={{fontFamily:"Cambria"}}>
+          <div className="rightTop user w-full ml-2 mt-5">
+            <h3>ANIKET WAKALKAR</h3>
+            <h5 className='' style={{fontFamily:"Cambria", fontSize:"16px"}}>Software Developer</h5>
+            <p className='mt-1 mb-3 font-normal' style={{fontFamily:"Cambria", fontSize:"16px"}}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut voluptatum ab molestias dicta fuga inventore officiis delectus. Expedita, ab deleniti.</p>
+          </div>
+          <div className='rightBottom w-full'>
+            <div className="education w-full ml-2">
+              <h4 style={{borderBottom:"1px solid black"}} className="pb-2">Education</h4>
+              <ul className='my-1 font-normal ml-2' style={{fontFamily:"Cambria", fontSize:"16px"}}>
+                <li className='my-1'>
+                  <h5>&#9702; Degree 2023 - 2025</h5>
+                  <div className="content pl-4">
+                    <h6>College Name | Location</h6>
+                  </div>
+                </li>
+                <li className='my-1'>
+                  <h5>&#9702; Degree 2023 - 2025</h5>
+                  <div className="content pl-4">
+                    <h6>College Name | Location</h6>
+                  </div>
+                </li>
+                <li className='my-1'>
+                  <h5>&#9702; Degree 2023 - 2025</h5>
+                  <div className="content pl-4">
+                    <h6>College Name | Location</h6>
+                    <h5 className=''>Degree</h5>
+                  </div>
+                </li>
               </ul>
             </div>
-            <div className="education w-full">
-              <p style={{borderBottom:"1px solid black"}} className="pb-2">Education</p>
-              <hr />
-              <ul className='my-1 ml-2' style={{fontFamily:"Cambria", fontSize:"16px"}}>
-                <li>B.E.</li>
-                <li>POLY</li>
+            <div className="experience w-full ml-2">
+              <h4 style={{borderBottom:"1px solid black"}} className="pb-2">Experience</h4>
+              <ul className='my-1 font-normal ml-2' style={{fontFamily:"Cambria", fontSize:"16px"}}>
+                <li className='my-5'>
+                  <h5>&#9702; 2023 - 2025</h5>
+                  <div className="content pl-4">
+                    <h6>Company Name | Location</h6>
+                    <h5 className=''>Web Developer</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam commodi vero nesciunt inventore reiciendis sapiente porro laborum ab dolorum recusandae? Ipsum cum sit nulla a!</p>
+                  </div>
+                </li>
+                <li className='my-5'>
+                  <h5>&#9702; 2023 - 2025</h5>
+                  <div className="content pl-4">
+                    <h6>Company Name | Location</h6>
+                    <h5 className=''>Web Developer</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam commodi vero nesciunt inventore reiciendis sapiente porro laborum ab dolorum recusandae? Ipsum cum sit nulla a!</p>
+                  </div>
+                </li>
+                <li className='my-5'>
+                  <h5>&#9702; 2023 - 2025</h5>
+                  <div className="content pl-4">
+                    <h6>Company Name | Location</h6>
+                    <h5 className=''>Web Developer</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam commodi vero nesciunt inventore reiciendis sapiente porro laborum ab dolorum recusandae? Ipsum cum sit nulla a!</p>
+                  </div>
+                </li>
               </ul>
             </div>
-            <div className="skills w-full">
-              <p style={{borderBottom:"1px solid black"}} className="pb-2">Skills</p>
-              <hr />
-              <ul className='my-1 ml-2' style={{fontFamily:"Cambria", fontSize:"16px"}}>
-                <li>c++</li>
-                <li>python</li>
-                <li>java</li>
-                <li>javascript</li>
-                <li>mongodb</li>
-                <li>postgresql</li>
-                <li>flask</li>
-                <li>react js</li>
-                <li>php</li>
-              </ul>
-            </div>
-            <div className="languages w-full">
-              <p style={{borderBottom:"1px solid black"}} className="pb-2">Languages</p>
-              <hr />
-              <ul className='my-1 ml-2' style={{fontFamily:"Cambria", fontSize:"16px"}}>
-                <li>marathi</li>
-                <li>hindi</li>
-                <li>english</li>
-              </ul>
-            </div>
-          {/* </div> */}
+          </div>
         </div>
-        <div className="right w-[70%] h-full bg-white"></div>
       </div>
     </div>
   </>
