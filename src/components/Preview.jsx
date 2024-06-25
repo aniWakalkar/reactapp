@@ -46,7 +46,7 @@ const Preview = () => {
 
   return (
   <>
-    <button onClick={handlePreviewPdf} class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mx-5 my-10">
+    <button onClick={handlePreviewPdf} className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center mx-5 my-10">
       <span>Preview PDF</span>
     </button>
 
@@ -55,7 +55,7 @@ const Preview = () => {
       link.href = pdfPreview;
       link.download = 'document.pdf';
       link.click();
-    }} class="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded inline-flex items-center mx-5 my-10">
+    }} className="bg-blue-700 hover:bg-blue-800 text-white font-bold py-2 px-4 rounded inline-flex items-center mx-5 my-10">
       <span>Download</span>
     </button>
   
